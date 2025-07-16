@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+:root{
+    --big-font-color--: #0b1c39;
+    --small-font-color--: #212025;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none !important;
+    text-decoration-color: black;
+}
+
+header{
+    background-color: white;
+    nav{
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        .nav-func{
+            display: flex;
+            column-gap:25px;
+            padding-top: -20px;
+            cursor: pointer;
+        }
+        button{
+            border: none;
+            background-color: white;
+            font-weight: 500;
+        }
+        button:hover{
+            transform: scale(1.05);
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+
+/* start banner */
+.banner{
+    background-color: #f0f0f2;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    min-height: 500px;
+    background-position: 50%;
+    background-image: url("https://preview.colorlib.com/theme/timezone/assets/img/hero/about_hero.png");
+    .banner-title{
+        color: var(--big-font-color--);
+        h2{
+            font-weight: 700 !important;
+            font-size: 70px;
+            font-family: "Josefin Sans", sans-serif;
+            text-size-adjust: 100%;
+        }
+    }
+}
+
+/* start login part */
+.section-login{
+    background-color: white;
+    padding: 80px 0px 80px;
+}
+
+.login-part-text{
+    background-image: -webkit-linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
+    background-image: linear-gradient(90deg, #B08EAD 0%, #4B3049 64%, #B08EAD 100%);
+    background-size: 200% auto;
+    padding: 30px;
+    height: 500px;
+    display: table;
+    align-items: center;
+    .login-part-text-inner{
+        display: table-cell ;
+        vertical-align: middle ;
+        gap: 30px;
+        align-items: center;
+        text-align: center;
+        .login-inner-text{
+            display: table-cell ;
+            vertical-align: middle ;
+            height: 100%;
+            align-items: center;
+            h2{
+                font-family: "Josefin Sans",sans-serif;
+                color: white;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 35px;
+                margin-bottom: 15px;
+            }
+            p{
+                text-align: center;
+                font-family: "Roboto", sans-serif;
+                color: white;
+                font-size: 16px;
+                line-height: 30px;
+                margin-bottom: 15px;
+                font-weight: normal;
+            }
+            button{
+                border: 1px solid #fff;
+                background-color: transparent;
+                font-size: 15px;
+                margin-top: 25px;
+                color: #fff !important;
+                padding: 20px;
+                border-radius: 5px;
+                width: 50%;
+            }
+            button:hover{
+                background-color: azure;
+                transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                transition-duration: 1s;
+                color: red !important;
+            }
+        }
+    }
+    
+}
+
+.login-part-form{
+    height: 400px;
+    display: table;
+    .login-part-form-inner{
+        display: table-cell;
+        vertical-align: middle;
+        font-family: "Roboto", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        h3{
+            margin-bottom: 30px;
+            font-family: "Roboto", sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            font-family: "Josefin Sans", sans-serif;
+            color: #0b1c39;
+            font-style: normal;
+            font-weight: bold;
+        }
+        .form-group{
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .form-input{
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid gray;
+            
+        }
+        .form-input:focus{
+            outline: none;
+            border-bottom: 1px solid gray;
+        }
+        .form-login{
+            .checkbox{
+                float: left;
+                margin-top: 10px;
+                display: flex;
+            }
+            label{
+                margin-left: 10px;
+                font-size: 14px;
+                color: #777;
+            }
+            .btn-login{
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 17px;
+                padding: 18px 36px;
+                border: 1px solid #2577fd;
+                border-radius: 5px;
+                background-color: transparent;
+            }
+            .btn-login:hover{
+                background-color: #2577fd;
+                transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                transition-duration: 1s;
+                color: white;
+            }
+        }
+    }
+}
+
+/* start shop method */
+#shop-method{
+    background-color: white;
+    padding: 100px 50px;
+    .method-wrapper{
+        background-color: red;
+        .method{
+            padding: 65px 65px;
+            text-align: left;
+            .method-title{
+                font-family: "Roboto",sans-serif;
+                color: white;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .method-desc{
+                font-family: "Roboto",sans-serif;
+                font-size: 20px;
+                color: white;
+            }
+            .method-logo{
+                text-align: left;
+                text-size-adjust: 100%;
+                color: white;
+            }
+    }
+    }
+    
+}

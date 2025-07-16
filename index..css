@@ -12,7 +12,10 @@ img {
     max-width: 100%;
     display: block;
 }
-
+a{
+    text-decoration: none !important;
+    text-decoration-color: black;
+}
 header{
     background-color: white;
     nav{
@@ -20,14 +23,20 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
         .nav-func{
             display: flex;
-            column-gap: 15px;
+            column-gap:25px;
             padding-top: -20px;
             cursor: pointer;
         }
-        li:hover{
-            transform: scale(1.2);
+        button{
+            border: none;
+            background-color: white;
+            font-weight: 500;
+        }
+        button:hover{
+            transform: scale(1.05);
             transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transition-duration: 0.5s;
         }
@@ -95,8 +104,7 @@ ul{
         .section-title{
             font-family: "Josefin Sans",sans-serif;
             font-weight: bold;
-    
-}
+        }
     }
     .watch-box{
         padding-bottom: 10px;

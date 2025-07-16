@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+:root{
+    --big-font-color--: #0b1c39;
+    --small-font-color--: #212025;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none !important;
+    text-decoration-color: black;
+}
+
+header{
+    background-color: white;
+    nav{
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        .nav-func{
+            display: flex;
+            column-gap:25px;
+            padding-top: -20px;
+            cursor: pointer;
+        }
+        button{
+            border: none;
+            background-color: white;
+            font-weight: 500;
+        }
+        button:hover{
+            transform: scale(1.05);
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+
+/* start banner */
+.banner{
+    background-color: #f0f0f2;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+    min-height: 500px;
+    background-position: 50%;
+    background-image: url("https://preview.colorlib.com/theme/timezone/assets/img/hero/about_hero.png");
+    .banner-title{
+        color: var(--big-font-color--);
+        h2{
+            font-weight: 700 !important;
+            font-size: 70px;
+            font-family: "Josefin Sans", sans-serif;
+            text-size-adjust: 100%;
+        }
+        h3{
+            font-weight: 500 !important;
+            font-size: 30px;
+            font-family: "Josefin Sans", sans-serif;
+            text-size-adjust: 100%;
+        }
+    }
+}
+
+
+/* start shop method */
+#shop-method{
+    background-color: white;
+    padding: 100px 50px;
+    .method-wrapper{
+        background-color: red;
+        .method{
+            padding: 65px 65px;
+            text-align: left;
+            .method-title{
+                font-family: "Roboto",sans-serif;
+                color: white;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .method-desc{
+                font-family: "Roboto",sans-serif;
+                font-size: 20px;
+                color: white;
+            }
+            .method-logo{
+                text-align: left;
+                text-size-adjust: 100%;
+                color: white;
+            }
+    }
+    }
+    
+}
