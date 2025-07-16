@@ -1,0 +1,96 @@
+{
+    "products" : [
+        {
+            "id" : 1,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular1.png.webp",
+            "category" : "popular"
+        },
+        
+        {
+            "id" : 2,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular2.png.webp",
+            "category" : "popular"
+        },
+                {
+            "id" : 3,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular3.png.webp",
+            "category" : "popular"
+        },
+        
+                {
+            "id" : 4,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular4.png.webp",
+            "category" : "popular"
+        },
+        
+                {
+            "id" : 5,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular5.png.webp",
+            "category" : "popular"
+        },
+        
+        {
+            "id" : 6,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular6.png.webp",
+            "category" : "popular"
+        },
+        {
+            "id" : 7,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://www.watchstore.vn/images/products/2024/06/14/resized/mtp-1374l-1avdf_1718337912.webp",
+            "category" : "new-arrival"
+        },
+        
+        {
+            "id" : 8,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://www.watchstore.vn/images/products/2024/resized/ra-aa0b02r19b-2081811590-287106387-1712482956.webp",
+            "category" : "new-arrival"
+        },
+                {
+            "id" : 9,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://www.watchstore.vn/images/products/2024/resized/op990-45adgs-gl-d-1-1655171691816-1712491806.webp",
+            "category" : "new-arrival"
+        },
+        
+                {
+            "id" : 10,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://www.watchstore.vn/images/products/2024/resized/ra-ar0005y10b-1712482960.webp",
+            "category" : "new-arrival"
+        },
+        
+                {
+            "id" : 11,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://www.watchstore.vn/images/products/2024/resized/123aaa-1712482958.webp",
+            "category" : "new-arrival"
+        },
+        
+        {
+            "id" : 12,
+            "name" :"Thermo Ball Etip Gloves",
+            "price" : 45.743,
+            "img_url" : "https://www.watchstore.vn/images/products/2024/06/07/resized/t050-207-1712724762_1717756476.webp",
+            "category" : "new-arrival"
+        }
+    ]
+}
