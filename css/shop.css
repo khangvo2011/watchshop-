@@ -71,11 +71,37 @@ header{
 }
 
 /* start newest arrival */
-.newest-arrival{
+.products{
     text-align: center;
     overflow: hidden;
     padding-top: 100px;
     padding-bottom: 50px;
+    .justify{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        gap: 400px;
+        margin-bottom: 50px;
+    }
+    button {
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 1s ease;
+    }
+
+    button:active {
+    border-bottom: 2px solid red;
+    }
+    .properties-btn{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+
+    }
+    
     .popular-title {
         padding-top: 50px;
         padding-bottom: 30px;
@@ -95,6 +121,7 @@ header{
         transition-duration: 0.5s;
     }
 }
+
 
 
 /* start shop-method */

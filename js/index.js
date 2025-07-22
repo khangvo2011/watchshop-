@@ -4,39 +4,68 @@ document.addEventListener("DOMContentLoaded", function(event){
         return response.json()
     })
     .then(function(result){
-        console.log(result);
+        const products = result.products; 
+        const CATEGORY_POPULAR = "popular"; 
+        const CATEGORY_ARRIVAL = "new-arrival"; 
+        let popularProducts = []
+    //    1. filter product has category popular
+        for(let index = 0; index < products.length; index += 1){
+            let product = products[index]
+            if(product.category == CATEGORY_POPULAR){
+                popularProducts.push(product)
+            }
+        }
+
+    // 2. Render popular products. 
         const popularBoxes = document.querySelector(".popular-boxes")
-        console.log(popularBoxes);                                  
-        let popularItems = []
-        const popularProducts = result.products
-        let productUsingRender = ""
-        for(let index = 0; index < popularProducts.length; index+=1){
+        let html_popular = ""; 
+        for (let index = 0; index < popularProducts.length; index += 1) {
             let product = popularProducts[index]
-            if(product.category == "popular"){
-                popularItems.push(product)
-                let html = `
+            html_popular += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="watch-box">
+                        <div class="watch-box" data-id=${product.id}>
                             <img src="${product.img_url}"
                                 alt="">
                             <div class="watch-box-desc">
-                                <h3>Thermo Ball Etip Gloves</h3>
-                                <p>$45,743</p>
+                                <h3>${product.name}</h3>
+                                <p>${product.price}</p>
                             </div>
                         </div>
                     </div>
-                `
-                productUsingRender +=html
-            }
-            if (popularBoxes) {
-        popularBoxes.innerHTML = productUsingRender;
+                `; 
+        }
+        popularBoxes.innerHTML = html_popular; 
+
+
+        // filter new arrival category
+        let newArrivalProducts = []
+        for(let index = 0; index < products.length; index += 1){
+            let product = products[index]
+            if(product.category == CATEGORY_ARRIVAL){
+                newArrivalProducts.push(product)
             }
         }
-        console.log(popularItems);
-        console.log(product.img_url)
-        parent.innerHTML = productUsingRender
-
-        
+        // render new arrival products
+        const newArrivalBoxes = document.querySelector(".new-arrival-boxes")
+        let html_arrival = ""
+        for(let index = 0 ; index < newArrivalProducts.length ; index +=1){
+            let product = newArrivalProducts[index]
+            html_arrival += `
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-box">
+                            <div class="img-1">
+                                <img
+                                    src="${product.img_url}"
+                                    alt="">
+                                </div>
+                            <div class="product-caption">
+                                <h3>${product.name}</h3>
+                                <span>${product.price}</span>
+                            </div>
+                        </div>
+                    </div>`
+        }
+        newArrivalBoxes.innerHTML = html_arrival
     })
     .catch(function(error){
         console.log("exception: ", error )
