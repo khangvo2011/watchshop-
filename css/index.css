@@ -228,6 +228,7 @@ ul{
 /* start section watch of choice */
 .watch-of-choice-area{
     padding: 150px 70px 120px;
+    display: block;
     .section-title{
         h2{
             font-family: "Josefin Sans",sans-serif;
