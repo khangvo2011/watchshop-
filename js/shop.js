@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     price: "price",
     all: "all",
   };
+const tabActive = document.querySelector(".tabs .active")
+fetchProductList(tabActive.getAttribute("data-tab"))
 
   const tabs = document.querySelectorAll(".tab");
   for (let index = 0; index < tabs.length; index += 1) {
@@ -18,7 +20,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
       tab.classList.add("active");
 
       const categoryFilter = tab.getAttribute("data-tab");
-      fetch("./product.json")
+      fetchProductList(categoryFilter)
+    });
+  }
+  function fetchProductList (categoryFilter) {
+    fetch("./product.json")
         .then(function (response) {
           return response.json();
         })
@@ -46,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         .catch(function (error) {
           console.log(error);
         });
-    });
   }
 
   function filterProducts(products, categoryFilter) {

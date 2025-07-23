@@ -18,18 +18,23 @@ a{
 }
 header{
     background-color: white;
+    position: relative;
     nav{
         padding: 20px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
         .nav-func{
             display: flex;
+            flex-direction: row;
             column-gap:25px;
             padding-top: -20px;
             cursor: pointer;
+            .hamburger{
+                display: none;
+            }
         }
+        
         button{
             border: none;
             background-color: white;
@@ -37,10 +42,30 @@ header{
         }
         button:hover{
             transform: scale(1.05);
-            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: cubic-bezier(0.175, 2.885, 0.32, 1.275);
             transition-duration: 0.5s;
         }
     }
+}
+@media screen and (max-width: 992px) {
+header{
+    background-color: white;
+    position: relative;
+    nav{
+        .nav-func{
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            left: 0%;
+            top: 100%;
+            z-index: 999;
+            height: 100%;
+            .hamburger{
+                display: none;
+            }
+        }
+    }
+}
 }
 /* start banner */
 .banner{
@@ -150,7 +175,7 @@ ul{
         width: 25%;
         position: relative;
     }
-} 
+}
 /* start shop method */
 #shop-method{
     background-color: white;
