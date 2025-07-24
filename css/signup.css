@@ -34,6 +34,14 @@ header{
             padding-top: -20px;
             cursor: pointer;
         }
+        .hamburger{
+            display: none;
+        }   
+        .nav-icon{
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+        }
         button{
             border: none;
             background-color: white;
@@ -45,6 +53,33 @@ header{
             transition-duration: 0.5s;
         }
     }
+}
+@media screen and (max-width: 992px) {
+header{
+    background-color: white;
+    position: relative;
+    nav{
+        .nav-func{
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            left: 0%;
+            top: 100%;
+            z-index: 999;
+            height: 100%;
+            .hamburger{
+                display: none;
+            }
+        }
+        .nav-icon{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 30px;
+        }
+    }
+}
 }
 
 
