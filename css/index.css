@@ -1,156 +1,180 @@
-*{
-    padding: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
-:root{
-    --big-font-color--: #0b1c39;
-    --small-font-color--: #212025;
+:root {
+  --big-font-color--: #0b1c39;
+  --small-font-color--: #212025;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
-a{
-    text-decoration: none !important;
-    text-decoration-color: black;
+a {
+  text-decoration: none !important;
+  text-decoration-color: black;
 }
-header{
-    background-color: white;
-    position: relative;
-    nav{
-        padding: 20px 0;
+header {
+  background-color: white;
+  z-index: 2;
+  position: relative;
+
+  nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navigation {
+      .hamburger {
+        display: none;
+      }
+      .nav-func {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .nav-func{
-            display: flex;
-            flex-direction: row;
-            column-gap:25px;
-            padding-top: -20px;
-            cursor: pointer;
-            .hamburger{
-                display: none;
-            }   
+        flex-direction: row;
+        column-gap: 25px;
+        cursor: pointer;
+        .hamburger {
+          display: none;
         }
-        .nav-icon{
-            display: flex;
-            align-items: center;
-            column-gap: 30px;
-        }
-        
-        button{
-            border: none;
-            background-color: white;
-            font-weight: 500;
-        }
-        button:hover{
-            transform: scale(1.05);
-            transition: cubic-bezier(0.175, 2.885, 0.32, 1.275);
-            transition-duration: 0.5s;
-        }
+      }
     }
+
+    .nav-icon {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+    }
+
+    button {
+      border: none;
+      background-color: white;
+      font-weight: 500;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      transition: cubic-bezier(0.175, 2.885, 0.32, 1.275);
+      transition-duration: 0.5s;
+    }
+  }
 }
 @media screen and (max-width: 992px) {
-header{
+  header {
     background-color: white;
     position: relative;
-    nav{
-        .nav-func{
-            flex-direction: column;
-            position: absolute;
-            width: 100%;
-            left: 0%;
-            top: 100%;
-            z-index: 999;
-            height: 100%;
-            .hamburger{
-                display: none;
-            }
+    z-index: 2;
+    nav {
+      .navigation {
+        background-color: #4c4c4c;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        padding: 10px;
+        .hamburger {
+          display: block;
+          width: 100%;
+          text-align: right;
+          button {
+            background-color: #222;
+            border-radius: 10px;
+            color: white;
+            padding: 5px;
+          }
         }
-        .nav-icon{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            column-gap: 30px;
+        .nav-func {
+          flex-direction: column;
+          overflow: hidden;
+          visibility: visible;
+          opacity: 0;
+          max-height: 0px;
+          transition: 0.5s all;
         }
+        .show {
+          visibility: visible;
+          opacity: 1;
+          max-height: 500px;
+        }
+      }
     }
-}
+  }
 }
 /* start banner */
-.banner{
-    background-color: #f0f0f2;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    .banner-title{
-        font-family: "Josefin Sans",sans-serif;
-        color: #0b1c39;
-        font-weight: 700;
-        font-size: 50px;
+.banner {
+  background-color: #f0f0f2;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  .banner-title {
+    font-family: "Josefin Sans", sans-serif;
+    color: #0b1c39;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  .banner-desc {
+    font-family: "Roboto", sans-serif;
+    color: #212025;
+    font-weight: 400;
+    font-size: 17px;
+  }
+  .banner-img {
+    width: 50%;
+    .heartbeat {
+      animation: heartbeat 12s infinite alternate;
     }
-    .banner-desc{
-        font-family: "Roboto",sans-serif;
-        color: #212025;
-        font-weight: 400;
-        font-size: 17px;
-    }
-    .banner-img {
-        width: 50%;
-        .heartbeat {
-            animation: heartbeat 12s infinite alternate;
-        }
-    }
-    .btn-shop-now{
-        border: none;
-        padding: 5px 20px;
-        border-radius: 2%;
-        width: 25%;
-        cursor: pointer;
-        background-color: #4a4a4b;
-        color: white;
-        font-family: "Josefin Sans",sans-serif;
-        font-size: 16px;
-        font-weight: 600;
-    }
-    .btn-shop-now:hover{
-        background-color: red;
-        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        transition-duration: 0.5s;
-    }
+  }
+  .btn-shop-now {
+    border: none;
+    padding: 5px 20px;
+    border-radius: 2%;
+    width: 25%;
+    cursor: pointer;
+    background-color: #4a4a4b;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .btn-shop-now:hover {
+    background-color: red;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 0.5s;
+  }
 }
 /* end banner */
-ul{
-    list-style: none;
-    margin: 0 !important;
-    padding: 0;
+ul {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0;
 }
-.watch-box-desc{
-    text-align: center;
+.watch-box-desc {
+  text-align: center;
 }
-.popular{
-    text-align: center;
-    overflow: hidden;
-    .popular-title {
-        padding-top: 50px;
-        padding-bottom: 30px;
-        width: 50%;
-        display: inline-block;
-        .section-title{
-            font-family: "Josefin Sans",sans-serif;
-            font-weight: bold;
-        }
+.popular {
+  text-align: center;
+  overflow: hidden;
+  .popular-title {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    width: 50%;
+    display: inline-block;
+    .section-title {
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: bold;
     }
-    .watch-box{
-        padding-bottom: 10px;
-    }
-    .watch-box:hover{
-        transform: scale(1.05);
-        transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-        transition-duration: 0.5s;
-    }
+  }
+  .watch-box {
+    padding-bottom: 10px;
+  }
+  .watch-box:hover {
+    transform: scale(1.05);
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-duration: 0.5s;
+  }
 }
 
 @keyframes heartbeat {
@@ -172,134 +196,132 @@ ul{
 }
 
 @media screen and (max-width: 767px) {
-    .heartbeat{
-        display: none;
-    }
-    .choice-img{
-        display: none;
-    }
-} 
+  .heartbeat {
+    display: none;
+  }
+  .choice-img {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 991px) {
-    .btn-shop-now{
-        padding: 0px 20px;
-        border-radius: 2%;
-        width: 25%;
-        position: relative;
-    }
+  .btn-shop-now {
+    padding: 0px 20px;
+    border-radius: 2%;
+    width: 25%;
+    position: relative;
+  }
 }
 /* start shop method */
-#shop-method{
-    background-color: white;
-    padding: 50px;
-    .method-wrapper{
-        background-color: red;
-        .method{
-            padding: 65px 65px;
-            text-align: left;
-            .method-title{
-                font-family: "Roboto",sans-serif;
-                color: white;
-                font-size: 20px;
-                font-weight: 700;
-            }
-            .method-desc{
-                font-family: "Roboto",sans-serif;
-                font-size: 20px;
-                color: white;
-            }
-            .method-logo{
-                text-align: left;
-                text-size-adjust: 100%;
-                color: white;
-            }
+#shop-method {
+  background-color: white;
+  padding: 50px;
+  .method-wrapper {
+    background-color: red;
+    .method {
+      padding: 65px 65px;
+      text-align: left;
+      .method-title {
+        font-family: "Roboto", sans-serif;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .method-desc {
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        color: white;
+      }
+      .method-logo {
+        text-align: left;
+        text-size-adjust: 100%;
+        color: white;
+      }
     }
-    }
-    
+  }
 }
 /* end shop section */
 
 /* start section new arrival */
-#new-arrival{
-    background-color: white;
-    padding-top: 150px;
+#new-arrival {
+  background-color: white;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+  .section-title {
     padding-bottom: 50px;
+    text-align: left;
+    h2 {
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+    }
+  }
+
+  .product-box:hover {
+    transform: scale(0.97);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 1s;
+  }
+
+  .product-caption {
+    display: block;
+    padding-bottom: 30px;
+    text-align: center;
     overflow: hidden;
-    position: relative;
-    .section-title{
-        padding-bottom: 50px;
-        text-align: left;
-        h2{
-            font-family: "Josefin Sans",sans-serif;
-            font-weight: 700;
-            font-size: 48px;
-        }
+    h3 {
+      padding-top: 20px;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 12px;
     }
-
-    .product-box:hover{
-            transform: scale(0.97);
-            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transition-duration: 1s;
-        }
-
-    .product-caption{
-        display: block;
-        padding-bottom: 30px;
-        text-align: center;
-        overflow: hidden;
-        h3{
-            padding-top: 20px;
-            font-family:"Josefin Sans",sans-serif ;
-            font-weight: 700;
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
-        span{
-            color: red;
-        }
-        
+    span {
+      color: red;
     }
-    }
+  }
+}
 /* end section new arrival */
 
 /* start section watch of choice */
-.watch-of-choice-area{
-    padding: 150px 70px 120px;
-    display: block;
-    .section-title{
-        h2{
-            font-family: "Josefin Sans",sans-serif;
-            font-size: 46px;
-            font-weight: 700;
-            line-height: 1;
-            margin: 0px 0px 40px;
-        }
-        p{
-            font-family: "Roboto", sans-serif;
-            font-size: 16px;
-            color: #777;
-            margin-bottom: 50px;
-        }
-        .btn-show-watch{
-            border: none;
-            display: inline-block;
-            padding: 5px 20px;
-            border-radius: 2%;
-            width: 40%;
-            cursor: pointer;
-            background-color: red;
-            color: white;
-            font-family: "Josefin Sans",sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-        }
-        .btn-show-watch:hover{
-            background-color: black;
-            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transition-duration: 0.5s;
-        }
+.watch-of-choice-area {
+  padding: 150px 70px 120px;
+  display: block;
+  .section-title {
+    h2 {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0px 0px 40px;
     }
+    p {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 50px;
+    }
+    .btn-show-watch {
+      border: none;
+      display: inline-block;
+      padding: 5px 20px;
+      border-radius: 2%;
+      width: 40%;
+      cursor: pointer;
+      background-color: red;
+      color: white;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .btn-show-watch:hover {
+      background-color: black;
+      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-duration: 0.5s;
+    }
+  }
 }
-.watch-of-choice-area-1{
-    padding: 50px 70px 120px;
+.watch-of-choice-area-1 {
+  padding: 50px 70px 120px;
 }

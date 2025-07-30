@@ -1,27 +1,27 @@
-document.addEventListener("DOMContentLoaded", function(event){
-    fetch("./product.json") 
-    .then(function(response){
-        return response.json()
+document.addEventListener("DOMContentLoaded", function (event) {
+  fetch("./product.json")
+    .then(function (response) {
+      return response.json();
     })
-    .then(function(result){
-        const products = result.products; 
-        const CATEGORY_POPULAR = "popular"; 
-        const CATEGORY_ARRIVAL = "new-arrival"; 
-        let popularProducts = []
-    //    1. filter product has category popular
-        for(let index = 0; index < products.length; index += 1){
-            let product = products[index]
-            if(product.category == CATEGORY_POPULAR){
-                popularProducts.push(product)
-            }
+    .then(function (result) {
+      const products = result.products;
+      const CATEGORY_POPULAR = "popular";
+      const CATEGORY_ARRIVAL = "new-arrival";
+      let popularProducts = [];
+      //    1. filter product has category popular
+      for (let index = 0; index < products.length; index += 1) {
+        let product = products[index];
+        if (product.category == CATEGORY_POPULAR) {
+          popularProducts.push(product);
         }
+      }
 
-    // 2. Render popular products. 
-        const popularBoxes = document.querySelector(".popular-boxes")
-        let html_popular = ""; 
-        for (let index = 0; index < popularProducts.length; index += 1) {
-            let product = popularProducts[index]
-            html_popular += `
+      // 2. Render popular products.
+      const popularBoxes = document.querySelector(".popular-boxes");
+      let html_popular = "";
+      for (let index = 0; index < popularProducts.length; index += 1) {
+        let product = popularProducts[index];
+        html_popular += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="watch-box" data-id=${product.id}>
                             <img src="${product.img_url}"
@@ -32,25 +32,24 @@ document.addEventListener("DOMContentLoaded", function(event){
                             </div>
                         </div>
                     </div>
-                `; 
-        }
-        popularBoxes.innerHTML = html_popular; 
+                `;
+      }
+      popularBoxes.innerHTML = html_popular;
 
-
-        // filter new arrival category
-        let newArrivalProducts = []
-        for(let index = 0; index < products.length; index += 1){
-            let product = products[index]
-            if(product.category == CATEGORY_ARRIVAL){
-                newArrivalProducts.push(product)
-            }
+      // filter new arrival category
+      let newArrivalProducts = [];
+      for (let index = 0; index < products.length; index += 1) {
+        let product = products[index];
+        if (product.category == CATEGORY_ARRIVAL) {
+          newArrivalProducts.push(product);
         }
-        // render new arrival products
-        const newArrivalBoxes = document.querySelector(".new-arrival-boxes")
-        let html_arrival = ""
-        for(let index = 0 ; index < newArrivalProducts.length ; index +=1){
-            let product = newArrivalProducts[index]
-            html_arrival += `
+      }
+      // render new arrival products
+      const newArrivalBoxes = document.querySelector(".new-arrival-boxes");
+      let html_arrival = "";
+      for (let index = 0; index < newArrivalProducts.length; index += 1) {
+        let product = newArrivalProducts[index];
+        html_arrival += `
             <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="product-box">
                             <div class="img-1">
@@ -63,11 +62,21 @@ document.addEventListener("DOMContentLoaded", function(event){
                                 <span>${product.price}</span>
                             </div>
                         </div>
-                    </div>`
-        }
-        newArrivalBoxes.innerHTML = html_arrival
+                    </div>`;
+      }
+      newArrivalBoxes.innerHTML = html_arrival;
     })
-    .catch(function(error){
-        console.log("exception: ", error )
-    })
-})
+    .catch(function (error) {
+      console.log("exception: ", error);
+    });
+
+  // click show menu
+  const buttonHamburger = document.querySelector(".hamburger button");
+  const listNavItems = document.querySelectorAll(".nav-item");
+  buttonHamburger.addEventListener("click", function () {
+    const navigation = document.querySelector(".nav-func");
+    console.log(navigation);
+    // add class - remove class
+    navigation.classList.toggle("show");
+  });
+});
