@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#form-login");
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
+
   const formData = new FormData(loginForm);
   const user = {
     email: formData.get("email"),
@@ -11,35 +12,40 @@ loginForm.addEventListener("submit", function (event) {
     alert("Email không được dưới 8 ký tự !");
     return;
   }
+
   if (user.password.length < 8) {
     alert("Mật khẩu không được dưới 8 ký tự !");
     return;
   }
+
   let userList = JSON.parse(localStorage.getItem("users"));
   if (userList == null) {
     userList = [];
-    alert("Chưa có tài khoản nào đã đăng ký, vui lòng đăng ký để tiếp tục !");
-    window.location.href = "signup.html";
+    alert("Không tìm thấy user !!!");
   } else {
-    existEmail = true;
+    isValidUser = false; // boolean nên đặt biến có is hoặc check.
+    // 1. loop kiểm tra xem có user nào trong local storage đúng email và password không
     for (let index = 0; index < userList.length; index++) {
-      const loginUser = userList.index;
-      if (user.email != loginUser.email) {
-        alert("Sai thông tin đăng nhập !");
-        existEmail = false;
-        return;
-      }
-      if (user.password != loginUser.password) {
-        alert("Sai thông tin đăng nhập !");
-        existEmail = false;
-        return;
-      } else {
-        existEmail = true;
-        window.location.href = "index.html";
+      // const loginUser = userList.index; => Sai
+      const userLogged = userList[index];
+      // Check email và password cùng luôn : || = or , && = and
+      if (
+        user.email === userLogged.email &&
+        user.password === userLogged.password
+      ) {
+        isValidUser = true;
       }
     }
+    // Kiểm tra sau vòng lặp: Nếu không có user nào đúng thì phủ định nó ! = not => 1. false => true, 2. True => false
+    if (!isValidUser) {
+      alert("Email hoặc password không đúng !!!");
+      return;
+    }
+
+    loginForm.reset();
+    alert("Đăng nhập thành công !!!");
+    window.location.href = "./index.html";
   }
-  registerForm.reset();
 });
 
 //   // click show menu
