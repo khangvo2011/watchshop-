@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+:root {
+  --big-font-color--: #0b1c39;
+  --small-font-color--: #212025;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none !important;
+  text-decoration-color: black;
+}
+ul {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0;
+}

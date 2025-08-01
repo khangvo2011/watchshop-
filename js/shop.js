@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     price: "price",
     all: "all",
   };
-const tabActive = document.querySelector(".tabs .active")
-fetchProductList(tabActive.getAttribute("data-tab"))
-
+  const tabActive = document.querySelector(".tabs .active");
+  fetchProductList(tabActive.getAttribute("data-tab"));
+  f;
   const tabs = document.querySelectorAll(".tab");
   for (let index = 0; index < tabs.length; index += 1) {
     const tab = tabs[index];
@@ -20,38 +20,38 @@ fetchProductList(tabActive.getAttribute("data-tab"))
       tab.classList.add("active");
 
       const categoryFilter = tab.getAttribute("data-tab");
-      fetchProductList(categoryFilter)
+      fetchProductList(categoryFilter);
     });
   }
-  function fetchProductList (categoryFilter) {
+  function fetchProductList(categoryFilter) {
     fetch("./product.json")
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          const products = data.products;
-          const parent = document.querySelector(".products-content");
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        const products = data.products;
+        const parent = document.querySelector(".products-content");
 
-          if (categoryFilter === CATEGORY.all) {
-            renderProductsTabs(products, parent);
-            return;
-          }
+        if (categoryFilter === CATEGORY.all) {
+          renderProductsTabs(products, parent);
+          return;
+        }
 
-          if (
-            categoryFilter === CATEGORY.popular ||
-            categoryFilter === CATEGORY["new-arrival"]
-          ) {
-            const productsFilter = filterProducts(products, categoryFilter);
-            renderProductsTabs(productsFilter, parent);
-            return;
-          }
+        if (
+          categoryFilter === CATEGORY.popular ||
+          categoryFilter === CATEGORY["new-arrival"]
+        ) {
+          const productsFilter = filterProducts(products, categoryFilter);
+          renderProductsTabs(productsFilter, parent);
+          return;
+        }
 
-          //   const productSortedPrice = sortProducts(products);
-          //   renderProductsTabs(productsFilter, parent);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+        //   const productSortedPrice = sortProducts(products);
+        //   renderProductsTabs(productsFilter, parent);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   function filterProducts(products, categoryFilter) {
@@ -89,4 +89,12 @@ fetchProductList(tabActive.getAttribute("data-tab"))
     }
     parent.innerHTML = html;
   }
+  const buttonHamburger = document.querySelector(".hamburger button");
+  const listNavItems = document.querySelectorAll(".nav-item");
+  buttonHamburger.addEventListener("click", function () {
+    const navigation = document.querySelector(".nav-func");
+    console.log(navigation);
+    // add class - remove class
+    navigation.classList.toggle("show");
+  });
 });
