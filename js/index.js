@@ -1,4 +1,7 @@
+import { handleClickShowMenu, handleClickShowUser } from "./common.js";
 document.addEventListener("DOMContentLoaded", function (event) {
+  handleClickShowMenu()
+  handleClickShowUser()
   fetch("./product.json")
     .then(function (response) {
       return response.json();
@@ -71,12 +74,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
   // click show menu
-  const buttonHamburger = document.querySelector(".hamburger button");
-  const listNavItems = document.querySelectorAll(".nav-item");
-  buttonHamburger.addEventListener("click", function () {
-    const navigation = document.querySelector(".nav-func");
-    console.log(navigation);
-    // add class - remove class
-    navigation.classList.toggle("show");
-  });
+
 });

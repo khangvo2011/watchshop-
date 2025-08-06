@@ -1,3 +1,6 @@
+import { handleClickShowMenu } from "./common.js";
+handleClickShowMenu();
+
 document.addEventListener("DOMContentLoaded", function (event) {
   const CATEGORY = {
     popular: "popular",
@@ -89,12 +92,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     parent.innerHTML = html;
   }
-  const buttonHamburger = document.querySelector(".hamburger button");
-  const listNavItems = document.querySelectorAll(".nav-item");
-  buttonHamburger.addEventListener("click", function () {
-    const navigation = document.querySelector(".nav-func");
-    console.log(navigation);
-    // add class - remove class
-    navigation.classList.toggle("show");
-  });
 });

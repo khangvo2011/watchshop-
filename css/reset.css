@@ -16,6 +16,7 @@ img {
 a {
   text-decoration: none !important;
   text-decoration-color: black;
+  color: var(--big-font-color--) !important;
 }
 ul {
   list-style: none;

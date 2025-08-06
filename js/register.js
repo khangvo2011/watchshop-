@@ -1,3 +1,11 @@
+import { handleClickShowMenu, handleClickShowUser } from "./common.js";
+if (localStorage.getItem("user-logged")) {
+  window.location.href = "./index.html";
+  return;
+}
+handleClickShowMenu();
+handleClickShowUser();
+
 const registerForm = document.querySelector(" #form-register");
 console.log(registerForm);
 registerForm.addEventListener("submit", function (event) {
@@ -39,6 +47,6 @@ registerForm.addEventListener("submit", function (event) {
   }
   userList.push(user);
   localStorage.setItem("users", JSON.stringify(userList));
-  window.location.href = "index.html"
+  window.location.href = "index.html";
   registerForm.reset();
 });

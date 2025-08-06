@@ -7,18 +7,40 @@
   align-items: center;
   overflow: hidden;
   position: relative;
+  font-family: "Josefin Sans", sans-serif;
+  color: #0b1c39;
+  font-weight: 700;
+  font-size: 50px;
   z-index: 1;
-  .banner-title {
-    font-family: "Josefin Sans", sans-serif;
-    color: #0b1c39;
-    font-weight: 700;
-    font-size: 50px;
-  }
   .banner-desc {
-    font-family: "Roboto", sans-serif;
-    color: #212025;
-    font-weight: 400;
-    font-size: 17px;
+    .btn-shop-now {
+      border: none;
+      padding: 5px 20px;
+      border-radius: 2%;
+      cursor: pointer;
+      background-color: #4a4a4b;
+      color: white;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .btn-shop-now:hover {
+      background-color: red;
+      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-duration: 0.5s;
+    }
+    h1 {
+      font-family: "Josefin Sans", sans-serif;
+      color: #0b1c39;
+      font-weight: 700;
+      font-size: 50px;
+    }
+    p {
+      font-family: "Roboto", sans-serif;
+      color: #212025;
+      font-weight: 400;
+      font-size: 17px;
+    }
   }
   .banner-img {
     width: 50%;
@@ -26,23 +48,17 @@
       animation: heartbeat 12s infinite alternate;
     }
   }
-  .btn-shop-now {
-    border: none;
-    padding: 5px 20px;
-    border-radius: 2%;
-    width: 25%;
-    cursor: pointer;
-    background-color: #4a4a4b;
-    color: white;
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+}
+@media screen and (max-width : 991px) {
+  .banner{
+    .banner-desc{
+      padding : 100px 0px 50px 0px;
+      h1{
+        font-size: 40px;
+      }
+    }
   }
-  .btn-shop-now:hover {
-    background-color: red;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition-duration: 0.5s;
-  }
+  
 }
 /* end banner */
 
@@ -99,14 +115,6 @@
   }
 }
 
-@media screen and (max-width: 991px) {
-  .btn-shop-now {
-    padding: 0px 20px;
-    border-radius: 2%;
-    width: 25%;
-    position: relative;
-  }
-}
 
 /* end shop section */
 
