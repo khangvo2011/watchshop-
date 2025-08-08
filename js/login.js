@@ -1,8 +1,5 @@
 import { handleClickShowMenu, handleClickShowUser } from "./common.js";
-if (localStorage.getItem("user-logged")) {
-  window.location.href = "./index.html";
-  return;
-}
+
 handleClickShowMenu();
 handleClickShowUser();
 const loginForm = document.querySelector("#form-login");
@@ -31,6 +28,7 @@ loginForm.addEventListener("submit", function (event) {
   if (userList == null) {
     userList = [];
     alert("Không tìm thấy user !!!");
+    window.location.href = "signup.html";
   } else {
     let isValidUser = false; // boolean nên đặt biến có is hoặc check.
     // 1. loop kiểm tra xem có user nào trong local storage đúng email và password không

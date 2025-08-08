@@ -1,4 +1,6 @@
 import { handleClickShowMenu, handleClickShowUser } from "./common.js";
+handleClickShowMenu();
+handleClickShowUser();
 if (localStorage.getItem("user-logged")) {
   window.location.href = "./index.html";
   return;

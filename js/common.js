@@ -8,14 +8,15 @@ export function handleClickShowMenu() {
     navigation.classList.toggle("show");
   });
 }
-
 export function handleClickShowUser() {
+  const iconUser = document.querySelector(".icon-user");
   let user = JSON.parse(localStorage.getItem("user-logged"));
   let html = ``;
-  const iconUser = document.querySelector(".icon-user");
 
   if (user == null) {
-    html = `<i class="fa-solid fa-user"></i>
+    html = `
+    <li class="icon-user">
+        <i class="fa-solid fa-user"></i>
                 <ul>
                   <li class="nav-item">
                     <a href="./login.html">Login</a>
@@ -23,7 +24,7 @@ export function handleClickShowUser() {
                   <li class="nav-item">
                     <a href="./register.html">Register</a>
                   </li>
-                </ul>`;
+                </ul> </li>`;
     iconUser.innerHTML = html;
   } else {
     html = `<i class="fa-solid fa-user"></i>
@@ -39,7 +40,7 @@ export function handleClickShowUser() {
       window.location.reload();
     });
   }
-  iconUser.addEventListener("click", function () {
+  parent.addEventListener("click", function () {
     const ul = document.querySelector(".icon-user ul");
     ul.classList.toggle("show-user");
   });

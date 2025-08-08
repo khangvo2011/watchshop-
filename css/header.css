@@ -25,6 +25,9 @@ header {
         .hamburger {
           display: none;
         }
+        .nav-item{
+          text-align: left;
+        }
       }
     }
 
