@@ -1,4 +1,8 @@
-import { handleClickShowMenu, handleClickShowUser } from "./common.js";
+import {
+  handleClickShowMenu,
+  handleClickShowUser,
+  formatVND,
+} from "./common.js";
 
 handleClickShowMenu();
 handleClickShowUser();
@@ -12,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   };
   const tabActive = document.querySelector(".tabs .active");
   fetchProductList(tabActive.getAttribute("data-tab"));
-  f;
   const tabs = document.querySelectorAll(".tab");
   for (let index = 0; index < tabs.length; index += 1) {
     const tab = tabs[index];
@@ -81,22 +84,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
     for (let index = 0; index < products.length; index += 1) {
       let product = products[index];
       html += `
-                              <div class="col-lg-4 col-md-6 col-sm-12">
-                                  <div class="watch-box" data-id = ${product.id}>
-                                      <img src="${product.img_url}"
-                                          alt="">
-                                      <div class="watch-box-desc">
-                                          <h3>${product.name}</h3>
-                                          <p>${product.price}</p>
-                                      </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12">
+                              <div class="box" data-id=${product.id}>
+                                  <div class="box-img">
+                                    <img src="${product.img_url}"
+                                        alt="">
                                   </div>
-                              </div>`;
+                                  <div class="box-desc">
+                                      <h3>${product.name}</h3>
+                                      <p>${formatVND(product.price)}</p>
+                                  </div>
+                              </div>
+                          </div>
+                      `;
     }
     parent.innerHTML = html;
   }
-
-  parent.addEventListener("click", function () {
-    const ul = document.querySelector(".icon-user ul");
-    ul.classList.toggle("show-user");
-  });
 });

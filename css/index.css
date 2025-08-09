@@ -70,7 +70,7 @@
 .watch-box-desc {
   text-align: center;
 }
-.popular {
+/* .popular {
   text-align: center;
   overflow: hidden;
   .popular-title {
@@ -91,7 +91,7 @@
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
     transition-duration: 0.5s;
   }
-}
+} */
 
 @keyframes heartbeat {
   0% {

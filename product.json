@@ -1,96 +1,95 @@
 {
-    "products" : [
-        {
-            "id" : 1,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular1.png.webp",
-            "category" : "popular"
-        },
-        
-        {
-            "id" : 2,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular2.png.webp",
-            "category" : "popular"
-        },
-                {
-            "id" : 3,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular3.png.webp",
-            "category" : "popular"
-        },
-        
-                {
-            "id" : 4,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular4.png.webp",
-            "category" : "popular"
-        },
-        
-                {
-            "id" : 5,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular5.png.webp",
-            "category" : "popular"
-        },
-        
-        {
-            "id" : 6,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular6.png.webp",
-            "category" : "popular"
-        },
-        {
-            "id" : 7,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "watch1.jpg",
-            "category" : "new-arrival"
-        },
-        
-        {
-            "id" : 8,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "watch1.jpg",
-            "category" : "new-arrival"
-        },
-                {
-            "id" : 9,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "watch1.jpg",
-            "category" : "new-arrival"
-        },
-        
-                {
-            "id" : 10,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "watch1.jpg",
-            "category" : "new-arrival"
-        },
-        
-                {
-            "id" : 11,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "watch1.jpg",
-            "category" : "new-arrival"
-        },
-        
-        {
-            "id" : 12,
-            "name" :"Thermo Ball Etip Gloves",
-            "price" : 45.743,
-            "img_url" : "watch1.jpg",
-            "category" : "new-arrival"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Longines 40mm Nam L2.821.5.57.7",
+      "price": 52500000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2025/06/longines-l28215577-768x768.jpg",
+      "category": "popular"
+    },
+    {
+      "id": 2,
+      "name": "Omega 42mm Nam 310.63.42.50.10.001",
+      "price": 58500000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2023/03/52-1679281029743-1712661790-300x300.jpg",
+      "category": "popular"
+    },
+    {
+      "id": 3,
+      "name": "Longines 37mm Nam L4.810.5.57.7",
+      "price": 44590000,
+      "img_url": "https://preview.colorlib.com/theme/timezone/assets/img/gallery/popular3.png.webp",
+      "category": "popular"
+    },
+
+    {
+      "id": 4,
+      "name": "Omega 36.8mm Nam 424.20.37.20.02.001",
+      "price": 108000000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2023/05/42420372002001-1-1563018140-1310878340-1712663740-300x300.jpg",
+      "category": "popular"
+    },
+
+    {
+      "id": 5,
+      "name": "Longines 38.5mm Nam L2.628.8.77.3",
+      "price": 92000000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2022/11/l2-401448266-1773899263-1712588988-300x300.jpg",
+      "category": "popular"
+    },
+
+    {
+      "id": 6,
+      "name": "Frederique Constant 40mm Nam FC-335MC4P4",
+      "price": 72162000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2021/12/fc-335mc4p4-1-1655105726596-1712579410-300x300.jpg",
+      "category": "popular"
+    },
+    {
+      "id": 7,
+      "name": "Omega 38.5mm Nam 231.55.39.21.55.001",
+      "price": 439000000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2022/08/231-55-39-21-55-001-1-1667272275263-1712587457-300x300.jpg",
+      "category": "new-arrival"
+    },
+
+    {
+      "id": 8,
+      "name": "Longines 41mm Nam L3.742.4.96.6",
+      "price": 160000003,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2022/01/l3-1637794812-873274979-1712579709-300x300.jpg",
+      "category": "new-arrival"
+    },
+    {
+      "id": 9,
+      "name": "Carnival 40mm Nam 8907G-VT-D",
+      "price": 3801000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2023/11/8907g-vt-d-1-1173700471-248243325-1712668536-300x300.jpg",
+      "category": "new-arrival"
+    },
+
+    {
+      "id": 10,
+      "name": "Tissot 40mm Nam T137.407.11.041.00",
+      "price": 16900000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2022/05/t137-679443174-610497435-1712585231-300x300.jpg",
+      "category": "new-arrival"
+    },
+
+    {
+      "id": 11,
+      "name": "Olym Pianus 42mm Nam OP990-45ADGS-GL-D",
+      "price": 6776000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2022/05/op990-45adgs-gl-d-1-1655171724651-1712585288-300x300.jpg",
+      "category": "new-arrival"
+    },
+
+    {
+      "id": 12,
+      "name": "Carnival 41mm Nam 8110G-VH-DD-N",
+      "price": 4851000,
+      "img_url": "https://www.watchstore.vn/wp-content/uploads/2023/07/8110g-vh-dd-n-1-1164444482-993248187-1712664914-300x300.jpg",
+      "category": "new-arrival"
+    }
+  ]
 }

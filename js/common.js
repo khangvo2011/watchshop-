@@ -3,13 +3,13 @@ export function handleClickShowMenu() {
   const listNavItems = document.querySelectorAll(".nav-item");
   buttonHamburger.addEventListener("click", function () {
     const navigation = document.querySelector(".nav-func");
-    console.log(navigation);
-    // add class - remove class
     navigation.classList.toggle("show");
   });
 }
+
 export function handleClickShowUser() {
   const iconUser = document.querySelector(".icon-user");
+
   let user = JSON.parse(localStorage.getItem("user-logged"));
   let html = ``;
 
@@ -39,8 +39,16 @@ export function handleClickShowUser() {
       window.location.reload();
     });
   }
-//   parent.addEventListener("click", function () {
-//     const ul = document.querySelector(".icon-user ul");
-//     ul.classList.toggle("show-user");
-//   });
+
+  iconUser.addEventListener("click", function () {
+    const ul = iconUser.querySelector("ul");
+    ul.classList.toggle("show-user");
+  });
+}
+
+export function formatVND(amount) {
+  return new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  }).format(amount);
 }

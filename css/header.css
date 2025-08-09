@@ -25,8 +25,16 @@ header {
         .hamburger {
           display: none;
         }
-        .nav-item{
+        .nav-item {
           text-align: left;
+          border-bottom: 1px solid transparent;
+          transition: 0.5s all;
+        }
+        .active {
+          border-bottom: 1px solid red;
+        }
+        .nav-item:hover {
+          border-bottom: 1px solid red;
         }
       }
     }
@@ -46,17 +54,22 @@ header {
           overflow: hidden;
           visibility: hidden;
           position: absolute;
-          top:  110%;
+          top: 110%;
           background-color: white;
+          width: 100px;
           padding: 0px;
           li {
             padding: 5px;
+            transition: 0.5s all;
           }
           li:hover {
-            color: red;
+            background-color: #212025;
+            a {
+              color: white !important;
+            }
           }
         }
-        .show-user{
+        .show-user {
           max-height: 500px;
           visibility: visible;
         }
@@ -107,6 +120,11 @@ header {
           opacity: 0;
           max-height: 0px;
           transition: 0.5s all;
+          .nav-item {
+            a {
+              color: white !important;
+            }
+          }
         }
         .show {
           visibility: visible;

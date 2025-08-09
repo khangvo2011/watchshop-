@@ -1,4 +1,8 @@
-import { handleClickShowMenu, handleClickShowUser } from "./common.js";
+import {
+  handleClickShowMenu,
+  handleClickShowUser,
+  formatVND,
+} from "./common.js";
 document.addEventListener("DOMContentLoaded", function (event) {
   handleClickShowMenu();
   handleClickShowUser();
@@ -26,12 +30,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         let product = popularProducts[index];
         html_popular += `
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="watch-box" data-id=${product.id}>
-                            <img src="${product.img_url}"
-                                alt="">
-                            <div class="watch-box-desc">
+                        <div class="box" data-id=${product.id}>
+                            <div class="box-img">
+                              <img src="${product.img_url}"
+                                  alt="">
+                            </div>
+                            <div class="box-desc">
                                 <h3>${product.name}</h3>
-                                <p>${product.price}</p>
+                                <p>${formatVND(product.price)}</p>
                             </div>
                         </div>
                     </div>
@@ -47,35 +53,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
           newArrivalProducts.push(product);
         }
       }
+
       // render new arrival products
       const newArrivalBoxes = document.querySelector(".new-arrival-boxes");
       let html_arrival = "";
       for (let index = 0; index < newArrivalProducts.length; index += 1) {
         let product = newArrivalProducts[index];
         html_arrival += `
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="product-box">
-                            <div class="img-1">
-                                <img
-                                    src="${product.img_url}"
-                                    alt="">
-                                </div>
-                            <div class="product-caption">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="box" data-id=${product.id}>
+                            <div class="box-img">
+                              <img src="${product.img_url}"
+                                  alt="">
+                            </div>
+                            <div class="box-desc">
                                 <h3>${product.name}</h3>
-                                <span>${product.price}</span>
+                                <p>${formatVND(product.price)}</p>
                             </div>
                         </div>
-                    </div>`;
+                    </div>
+                `;
       }
       newArrivalBoxes.innerHTML = html_arrival;
     })
     .catch(function (error) {
       console.log("exception: ", error);
     });
-
-  // click show menu
-  parent.addEventListener("click", function () {
-    const ul = document.querySelector(".icon-user ul");
-    ul.classList.toggle("show-user");
-  });
 });
