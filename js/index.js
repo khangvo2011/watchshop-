@@ -1,7 +1,7 @@
 import { handleClickShowMenu, handleClickShowUser } from "./common.js";
 document.addEventListener("DOMContentLoaded", function (event) {
-  handleClickShowMenu()
-  handleClickShowUser()
+  handleClickShowMenu();
+  handleClickShowUser();
   fetch("./product.json")
     .then(function (response) {
       return response.json();
@@ -74,5 +74,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
 
   // click show menu
-
+  parent.addEventListener("click", function () {
+    const ul = document.querySelector(".icon-user ul");
+    ul.classList.toggle("show-user");
+  });
 });

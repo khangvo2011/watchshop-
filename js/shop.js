@@ -1,5 +1,7 @@
-import { handleClickShowMenu } from "./common.js";
+import { handleClickShowMenu, handleClickShowUser } from "./common.js";
+
 handleClickShowMenu();
+handleClickShowUser();
 
 document.addEventListener("DOMContentLoaded", function (event) {
   const CATEGORY = {
@@ -92,4 +94,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     parent.innerHTML = html;
   }
+
+  parent.addEventListener("click", function () {
+    const ul = document.querySelector(".icon-user ul");
+    ul.classList.toggle("show-user");
+  });
 });

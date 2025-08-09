@@ -50,7 +50,7 @@
             "id" : 7,
             "name" :"Thermo Ball Etip Gloves",
             "price" : 45.743,
-            "img_url" : "https://www.watchstore.vn/images/products/2024/06/14/resized/mtp-1374l-1avdf_1718337912.webp",
+            "img_url" : "watch1.jpg",
             "category" : "new-arrival"
         },
         
@@ -58,14 +58,14 @@
             "id" : 8,
             "name" :"Thermo Ball Etip Gloves",
             "price" : 45.743,
-            "img_url" : "https://www.watchstore.vn/images/products/2024/resized/ra-aa0b02r19b-2081811590-287106387-1712482956.webp",
+            "img_url" : "watch1.jpg",
             "category" : "new-arrival"
         },
                 {
             "id" : 9,
             "name" :"Thermo Ball Etip Gloves",
             "price" : 45.743,
-            "img_url" : "https://www.watchstore.vn/images/products/2024/resized/op990-45adgs-gl-d-1-1655171691816-1712491806.webp",
+            "img_url" : "watch1.jpg",
             "category" : "new-arrival"
         },
         
@@ -73,7 +73,7 @@
             "id" : 10,
             "name" :"Thermo Ball Etip Gloves",
             "price" : 45.743,
-            "img_url" : "https://www.watchstore.vn/images/products/2024/resized/ra-ar0005y10b-1712482960.webp",
+            "img_url" : "watch1.jpg",
             "category" : "new-arrival"
         },
         
@@ -81,7 +81,7 @@
             "id" : 11,
             "name" :"Thermo Ball Etip Gloves",
             "price" : 45.743,
-            "img_url" : "https://www.watchstore.vn/images/products/2024/resized/123aaa-1712482958.webp",
+            "img_url" : "watch1.jpg",
             "category" : "new-arrival"
         },
         
@@ -89,7 +89,7 @@
             "id" : 12,
             "name" :"Thermo Ball Etip Gloves",
             "price" : 45.743,
-            "img_url" : "https://www.watchstore.vn/images/products/2024/06/07/resized/t050-207-1712724762_1717756476.webp",
+            "img_url" : "watch1.jpg",
             "category" : "new-arrival"
         }
     ]

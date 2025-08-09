@@ -1,9 +1,9 @@
 import { handleClickShowMenu, handleClickShowUser } from "./common.js";
 handleClickShowMenu();
 handleClickShowUser();
+
 if (localStorage.getItem("user-logged")) {
   window.location.href = "./index.html";
-  return;
 }
 handleClickShowMenu();
 handleClickShowUser();
@@ -49,6 +49,11 @@ registerForm.addEventListener("submit", function (event) {
   }
   userList.push(user);
   localStorage.setItem("users", JSON.stringify(userList));
-  window.location.href = "index.html";
+  window.location.href = "login.html";
   registerForm.reset();
+
+  parent.addEventListener("click", function () {
+    const ul = document.querySelector(".icon-user ul");
+    ul.classList.toggle("show-user");
+  });
 });

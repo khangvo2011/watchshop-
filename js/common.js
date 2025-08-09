@@ -15,16 +15,15 @@ export function handleClickShowUser() {
 
   if (user == null) {
     html = `
-    <li class="icon-user">
         <i class="fa-solid fa-user"></i>
                 <ul>
                   <li class="nav-item">
                     <a href="./login.html">Login</a>
                   </li>
                   <li class="nav-item">
-                    <a href="./register.html">Register</a>
+                    <a href="./signup.html">Register</a>
                   </li>
-                </ul> </li>`;
+                </ul>`;
     iconUser.innerHTML = html;
   } else {
     html = `<i class="fa-solid fa-user"></i>
@@ -40,8 +39,8 @@ export function handleClickShowUser() {
       window.location.reload();
     });
   }
-  parent.addEventListener("click", function () {
-    const ul = document.querySelector(".icon-user ul");
-    ul.classList.toggle("show-user");
-  });
+//   parent.addEventListener("click", function () {
+//     const ul = document.querySelector(".icon-user ul");
+//     ul.classList.toggle("show-user");
+//   });
 }

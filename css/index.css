@@ -43,22 +43,27 @@
     }
   }
   .banner-img {
-    width: 50%;
+    width: 60%;
     .heartbeat {
       animation: heartbeat 12s infinite alternate;
     }
   }
 }
-@media screen and (max-width : 991px) {
-  .banner{
-    .banner-desc{
-      padding : 100px 0px 50px 0px;
-      h1{
+@media screen and (max-width: 991px) {
+  .banner {
+    .banner-desc {
+      padding: 100px 0px 50px 0px;
+      h1 {
         font-size: 40px;
       }
     }
+    .banner-img {
+      width: 75%;
+      .heartbeat {
+        animation: heartbeat 12s infinite alternate;
+      }
+    }
   }
-  
 }
 /* end banner */
 
@@ -114,7 +119,6 @@
     display: none;
   }
 }
-
 
 /* end shop section */
 

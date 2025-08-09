@@ -55,4 +55,9 @@ loginForm.addEventListener("submit", function (event) {
     localStorage.setItem("user-logged", JSON.stringify(userLogged));
     window.location.href = "./index.html";
   }
+
+  parent.addEventListener("click", function () {
+    const ul = document.querySelector(".icon-user ul");
+    ul.classList.toggle("show-user");
+  });
 });
