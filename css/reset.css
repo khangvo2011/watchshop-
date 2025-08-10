@@ -27,6 +27,17 @@ ul {
 }
 
 .section-title {
+  font-family: "Josefin Sans", sans-serif !important;
+  color: #0b1c39 !important;
+  margin-top: 0px !important;
+  font-style: normal !important;
+  font-size: 40px;
+  padding-bottom: 50px;
+  font-weight: 700 !important;
+  text-align: center;
+}
+.section-desc{
+  text-align: center;
 }
 
 .box {

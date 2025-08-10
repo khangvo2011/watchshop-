@@ -43,7 +43,16 @@ loginForm.addEventListener("submit", function (event) {
         isValidUser = true;
         userLogged = currentUser;
       }
+      // check nếu chưa user nhập vào chưa tồn tại
+      if (
+        user.email != currentUser.email &&
+        user.password != currentUser.password
+      ) {
+        alert("User không tồn tại !!");
+        break;
+      }
     }
+
     // Kiểm tra sau vòng lặp: Nếu không có user nào đúng thì phủ định nó ! = not => 1. false => true, 2. True => false
     if (!isValidUser) {
       alert("Email hoặc password không đúng !!!");

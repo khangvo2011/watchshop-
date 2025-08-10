@@ -129,39 +129,36 @@
   padding-bottom: 50px;
   overflow: hidden;
   position: relative;
-  .section-title {
-    padding-bottom: 50px;
-    text-align: left;
-    h2 {
-      font-family: "Josefin Sans", sans-serif;
-      font-weight: 700;
-      font-size: 48px;
-    }
-  }
-
-  .product-box:hover {
-    transform: scale(0.97);
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition-duration: 1s;
-  }
-
-  .product-caption {
-    display: block;
-    padding-bottom: 30px;
-    text-align: center;
-    overflow: hidden;
-    h3 {
-      padding-top: 20px;
-      font-family: "Josefin Sans", sans-serif;
-      font-weight: 700;
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-    span {
-      color: red;
-    }
+  h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
   }
 }
+
+.product-box:hover {
+  transform: scale(0.97);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 1s;
+}
+
+.product-caption {
+  display: block;
+  padding-bottom: 30px;
+  text-align: center;
+  overflow: hidden;
+  h3 {
+    padding-top: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  span {
+    color: red;
+  }
+}
+
 /* end section new arrival */
 
 /* start section watch of choice */
@@ -203,5 +200,5 @@
   }
 }
 .watch-of-choice-area-1 {
-  padding: 50px 70px 120px;
+  padding: 50px 70px 200px;
 }
